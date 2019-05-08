@@ -12,22 +12,23 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
 
-    this.messageService.getMessages()
-      .subscribe(res => {
-        console.log(res);
-      });
+    // this.messageService.getMessages()
+    //   .subscribe(res => {
+    //     console.log(res);
+    //   });
 
-    this.messageService.getMessage('34')
-      .subscribe(res => {
-        console.log(res);
-      });
+    // this.messageService.getMessage('5c04b73880159ab69b1e29a9')
+    //   .subscribe(res => {
+    //     console.log(res);
+    //   });
 
-    const message = {
-      content: 'Message content',
-      submittedBy: 'Daniel'
+    const user = {
+      name: 'Daniel',
+      lastName: 'Méndez',
+      age: 23
     }
 
-    this.messageService.createMessage(message)
+    this.messageService.createMessage(user)
       .subscribe(res => {
         console.log(res);
       });

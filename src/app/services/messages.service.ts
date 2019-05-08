@@ -10,17 +10,19 @@ export class MessagesService {
   constructor(private http: HttpClient) { }
   
   getMessages(): Observable<Object> {
-    return this.http.get('http://localhost:3000/messages');
+    return this.http.get('http://localhost:3000/users');
   }
 
   getMessage(id: string): Observable<Object> {
-    return this.http.get(`http://localhost:3000/messages/${id}`);
+    return this.http.get(`http://localhost:3000/users/${id}`);
   }
 
-  createMessage(message): Observable<Object> {
-    return this.http.post(`http://localhost:3000/messages/`, {
-      content: message.content,
-      submittedBy: message.submittedBy
+  createMessage(user): Observable<Object> {
+    console.log(user)
+    return this.http.post(`http://localhost:3000/users/`, {
+      name: user.name,
+      lastName: user.lastName,
+      age: user.age
     });
   }
 }
