@@ -18,7 +18,6 @@ export class MessagesService {
   }
 
   createMessage(user): Observable<Object> {
-    console.log(user)
     return this.http.post(`http://localhost:3000/users/`, {
       name: user.name,
       lastName: user.lastName,

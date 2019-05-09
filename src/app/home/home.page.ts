@@ -17,21 +17,21 @@ export class HomePage implements OnInit {
     //     console.log(res);
     //   });
 
-    // this.messageService.getMessage('5c04b73880159ab69b1e29a9')
-    //   .subscribe(res => {
-    //     console.log(res);
-    //   });
-
-    const user = {
-      name: 'Daniel',
-      lastName: 'Méndez',
-      age: 23
-    }
-
-    this.messageService.createMessage(user)
+    this.messageService.getMessage('5cd4897220f3e16bbbeeb84e')
       .subscribe(res => {
         console.log(res);
       });
+
+    // const user = {
+    //   name: 'Daniel',
+    //   lastName: 'Méndez',
+    //   age: 23
+    // }
+
+    // this.messageService.createMessage(user)
+    //   .subscribe(res => {
+    //     console.log(res);
+    //   });
 
   }
 
